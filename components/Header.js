@@ -13,7 +13,7 @@ export default function Header() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <ul class="nav navbar-nav m-auto my-lg-0">
+            <ul className="nav navbar-nav m-auto my-lg-0">
               <Nav.Link
                 href="/"
                 className={styles.navLink}

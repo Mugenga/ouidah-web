@@ -52,6 +52,7 @@ export default function Footer() {
                   href="http://www.facebook.com/"
                   target="_blank"
                   title="Facebook"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-facebook-f"></i>
                 </a>
@@ -62,6 +63,7 @@ export default function Footer() {
                   href="http://www.twitter.com/"
                   target="_blank"
                   title="Twitter"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-twitter"></i>
                 </a>
@@ -72,6 +74,7 @@ export default function Footer() {
                   href="http://www.google.com/"
                   target="_blank"
                   title="Google"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-google"></i>
                 </a>
@@ -82,6 +85,7 @@ export default function Footer() {
                   href="http://www.youtube.com/"
                   target="_blank"
                   title="Youtube"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-youtube"></i>
                 </a>
