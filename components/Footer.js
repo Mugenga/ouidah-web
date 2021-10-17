@@ -87,7 +87,7 @@ export default function Footer() {
                   title="Youtube"
                   rel="noreferrer"
                 >
-                  <i className="fab fa-youtube"></i>
+                  <i className="fab fayoutube"></i>
                 </a>
               </li>
             </ul>
