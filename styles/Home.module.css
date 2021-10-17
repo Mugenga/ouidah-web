@@ -1,0 +1,16 @@
+.navLink{
+  color: #00206A !important;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.pmButton{
+  background-color: #00206A;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border: none;
+}

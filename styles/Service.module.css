@@ -1,0 +1,35 @@
+.headerImageWrapper {
+  padding: 5%;
+  position: relative;
+}
+
+.headerImageWrapper > img {
+  width: 90%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: -100px auto auto auto;
+  z-index: 10;
+}
+
+.servicePresentielImageWrapper {
+}
+
+.servicePresentielImageWrapper > img {
+  width: 90%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .headerImageWrapper > img {
+    height: 50vh;
+    margin-top: -150px;
+  }
+  .servicesSection1Left {
+    margin-top: 30vh;
+  }
+}
