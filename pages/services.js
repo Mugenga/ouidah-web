@@ -36,7 +36,7 @@ export default function Services() {
           <div className="col-md-7">
             <div className={styles.headerImageWrapper}>
               <img
-                src="/services.png"
+                src="/service.png"
                 alt="Commune Quidah Service Title Image"
               />
             </div>
@@ -96,7 +96,7 @@ export default function Services() {
             }
             style={{ padding: "5%" }}
           >
-            <img src="/services.png" alt="" />
+            <img src="/service.png" alt="" />
           </div>
         </div>
       </div>
