@@ -6,11 +6,11 @@ import NavBar from "../components/NavBar";
 
 export const getStaticProps = async () => {
   const data = {
-    headerTitle: "Municipalite",
+    headerTitle: "Tourism",
     headerText:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable English.",
     isHeaderButtonVisible: true,
-    imageUrl: 'time.jpg'
+    imageUrl: "/tourisme.jpg",
   };
 
   const cardData = [
@@ -29,11 +29,6 @@ export const getStaticProps = async () => {
       text: " It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable English.",
       buttonText: "Did you Know?",
     },
-    {
-      id: 1,
-      text: " It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable English.",
-      buttonText: "Did you Know?",
-    },
   ];
 
   return {
@@ -45,7 +40,7 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Municipalite({ data, cardData }) {
+export default function Tourisme({ data, cardData }) {
   return (
     <div>
       <Head>
@@ -60,19 +55,15 @@ export default function Municipalite({ data, cardData }) {
         isButton={data.isHeaderButtonVisible}
         imageUrl={data.imageUrl}
       />
-      <div className="container" style={{ marginTop: "100px" }}>
+      <div className="container">
         <div className="row">
-          <div className="col-sm-12">
-            <div className="row">
-              {cardData.map((card, index) => {
-                return (
-                  <div className="col-md-4" key={index}>
-                    <Card data={card} index={index} />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+          {cardData.map((card, index) => {
+            return (
+              <div className="col-md-4" key={index}>
+                <Card data={card} index={index} />
+              </div>
+            );
+          })}
         </div>
       </div>
       <Footer />

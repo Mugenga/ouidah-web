@@ -1,88 +1,33 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { useRouter } from "next/router";
-import styles from "../styles/Home.module.css";
+import dynamic from "next/dynamic";
+const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
-export default function Header() {
-  const router = useRouter();
+export default function Header({ title, text, imageUrl }) {
   return (
     <div>
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="/" onClick={() => router.push("/")}>
-            Commune de Oudah
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <ul className="nav navbar-nav m-auto my-lg-0">
-              <Nav.Link
-                href="/"
-                className={styles.navLink}
-                onClick={() => router.push("/")}
-              >
-                Home
-              </Nav.Link>
-              <Nav.Link
-                href="/services"
-                className={styles.navLink}
-                onClick={() => router.push("/services")}
-              >
-                Services
-              </Nav.Link>
-              <Nav.Link href="/municipalite" className={styles.navLink}>
-                Municipalite
-              </Nav.Link>
-              <Nav.Link href="/business" className={styles.navLink}>
-                Business
-              </Nav.Link>
-              <Nav.Link href="/tourisme" className={styles.navLink}>
-                Tourisme
-              </Nav.Link>
-              <Nav.Link href="/archives" className={styles.navLink}>
-                Archives
-              </Nav.Link>
-            </ul>
-            {/* <Nav
-              className="m-auto my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <Nav.Link
-                href="/"
-                className={styles.navLink}
-                onClick={() => router.push("/")}
-              >
-                Home
-              </Nav.Link>
-              <Nav.Link
-                href="/services"
-                className={styles.navLink}
-                onClick={() => router.push("/services")}
-              >
-                Services
-              </Nav.Link>
-              <Nav.Link href="/municipalite" className={styles.navLink}>
-                Municipalite
-              </Nav.Link>
-              <Nav.Link href="/business" className={styles.navLink}>
-                Business
-              </Nav.Link>
-              <Nav.Link href="/tourisme" className={styles.navLink}>
-                Tourisme
-              </Nav.Link>
-              <Nav.Link href="/archives" className={styles.navLink}>
-                Archives
-              </Nav.Link>
-            </Nav> */}
-            <Nav
-              className="ml-auto my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <button className={styles.pmButton}>My Account</button>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <OwlCarousel items={1} className="owl-theme" loop nav margin={0}>
+        <div className="item">
+          <section className="hero-wrap">
+            <div className="hero-mask opacity-7 bg-dark"></div>
+            <div
+              className="hero-bg"
+              style={{ backgroundImage: `url('${imageUrl}')` }}
+            ></div>
+            <div className="hero-content d-flex fullscreen-with-header py-5">
+              <div className="container my-auto">
+                <div className="row">
+                  <div className="col-12 col-lg-8 col-xl-7 text-left text-lg-left">
+                    <h2 className="text-18 text-white">{title}</h2>
+                    <p className="text-3 text-white mb-4">{text}</p>
+                    <div className="underline_green"></div>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </OwlCarousel>
     </div>
   );
 }
