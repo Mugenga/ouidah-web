@@ -60,14 +60,14 @@ export default function Footer() {
                 </a>
               </div>
               <div className="col-sm-12">
-                <div class="input-group custom-margin-lg" style={{width: "90%"}}>
+                <div className="input-group custom-margin-lg" style={{width: "90%"}}>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Search this blog"
                   />
-                  <div class="input-group-append">
-                    <button class="button-md" type="button">
+                  <div className="input-group-append">
+                    <button className="button-md" type="button">
                       Search
                     </button>
                   </div>
