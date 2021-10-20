@@ -30,16 +30,32 @@ export default function NavBar() {
               >
                 Services
               </Nav.Link>
-              <Nav.Link href="/municipalite" className="navLink">
+              <Nav.Link
+                href="/municipalite"
+                className="navLink"
+                onClick={() => router.push("/municipalite")}
+              >
                 Municipalite
               </Nav.Link>
-              <Nav.Link href="/business" className="navLink">
+              <Nav.Link
+                href="/business"
+                className="navLink"
+                onClick={() => router.push("/business")}
+              >
                 Business
               </Nav.Link>
-              <Nav.Link href="/tourisme" className="navLink">
+              <Nav.Link
+                href="/tourisme"
+                className="navLink"
+                onClick={() => router.push("/tourisme")}
+              >
                 Tourisme
               </Nav.Link>
-              <Nav.Link href="/archives" className="navLink">
+              <Nav.Link
+                href="/archives"
+                className="navLink"
+                onClick={() => router.push("#")}
+              >
                 Archives
               </Nav.Link>
             </ul>

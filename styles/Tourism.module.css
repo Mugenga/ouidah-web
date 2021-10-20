@@ -1,0 +1,34 @@
+.concertWrapper {
+  width: 100%;
+  margin: 50px 0;
+  padding: 0;
+  position: relative;
+  margin: 1px solid blue;
+}
+
+.concertWrapper > img {
+  width: 100%;
+  opacity: 0.4;
+}
+
+.concertWrapper > img:hover,
+.concertContent:hover + img {
+  opacity: 0.5;
+}
+
+.concertContent {
+  position: absolute;
+  padding: 0 5%;
+  height: 100px;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* EXPO SECTION */
+.expoLeft {
+  background-color: #00206a;
+  padding: 5%;
+}

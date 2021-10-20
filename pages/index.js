@@ -8,9 +8,9 @@ import styles from "../styles/Service.module.css";
 export const getStaticProps = async () => {
   const data = {
     headerTitle: "Services",
-    headerText:null,
+    headerText: null,
     isHeaderButtonVisible: true,
-    imageUrl: 'time.jpg'
+    imageUrl: "time.jpg",
   };
 
   return {
@@ -20,10 +20,9 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({data}) {
+export default function Home({ data }) {
   return (
     <div>
-      <NavBar />
       <Header
         title={data.headerTitle}
         text={data.headerText}
@@ -40,7 +39,10 @@ export default function Home({data}) {
               />
             </div>
           </div>
-          <div className={"col-md-5 " + styles.servicesSection1Left} style={{ padding: "5%" }}>
+          <div
+            className={"col-md-5 " + styles.servicesSection1Left}
+            style={{ padding: "5%" }}
+          >
             <h2 className="text-15 text-blue custom-margin-sm text-bold">
               E-Service
             </h2>
@@ -64,7 +66,7 @@ export default function Home({data}) {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row custom-margin-lg">
           <div className="col-md-5" style={{ padding: "5%" }}>
             <h2 className="text-15 text-blue custom-margin-sm text-bold">
               Service Presentiel
@@ -99,7 +101,6 @@ export default function Home({data}) {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
